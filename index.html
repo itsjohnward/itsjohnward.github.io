@@ -1,13 +1,25 @@
 ---
-layout: no-nav
+layout: default
 ---
 
-<div class="profile">
-  <h2 class="full-name">John Ward</h1>
-    <div class="description">
-      <p>Senior Software Engineer</p>
-      <p>@ <a class="gro" href='http://gro-intelligence.com/'>Gro Intelligence</a></p>
+<!DOCTYPE html>
+<html lang="en" class="home">
+  {% include head.html %}
+  <body class="home">
+    <div class="profile">
+      <h2 class="full-name">John Ward</h1>
+        <div class="description">
+          <p>Senior Software Engineer</p>
+          <p>@ <a class="gro" href='http://gro-intelligence.com/'>Gro Intelligence</a></p>
+        </div>
     </div>
-</div>
-<hr />
-{% include nav.html %}
+    <hr />
+    <nav class="home">
+      {% for item in site.data.nav %}
+      <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;" {% endif %}>
+        {{ item.name }}
+      </a>
+      {% endfor %}
+    </nav>
+  </body>
+</html>
