@@ -44,6 +44,11 @@ a.amazon:hover {
   border-bottom: 1px solid RGBA(255, 153, 0, .2);
 }
 
+a.facebook:hover {
+  color: RGBA(66, 103, 178, .9);
+  border-bottom: 1px solid RGBA(66, 103, 178, .2);
+}
+
 a.harvard:hover {
   color: RGBA(165, 28, 48, .9);
   border-bottom: 1px solid RGBA(165, 28, 48, .2);
